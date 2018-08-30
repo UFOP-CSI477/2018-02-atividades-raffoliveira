@@ -1,6 +1,6 @@
-#**CSI477 - WEB APPLICATION DEVELOPMENT I**
+# **CSI477 - WEB APPLICATION DEVELOPMENT I**
 
-##Rafael Francisco de Oliveira
+## **Rafael Francisco de Oliveira**
 
 Atividade I 
 
