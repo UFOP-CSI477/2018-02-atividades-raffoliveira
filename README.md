@@ -2,7 +2,7 @@
 
 ## **Rafael Francisco de Oliveira**
 
-###ACTIVITIES
+### ACTIVITIES
 
 ### ACTIVITY_01 (31/08/2018)
 
