@@ -8,7 +8,8 @@
     
     <h4>Please, fill the form above. As soon as possible we'll contact you!!! </h4>
     
-    <body>
+    <body style="background-image: url(logo.jpg)">
+        
         <form method="get" action="validate.html">
             
             <label for="name">Name:</label>
@@ -183,17 +184,20 @@
             <br><br>
             
             <label for="password">Password:</label>
-            <input type="password" name="password" style="width: 150px">
+            <input type="password" name="password" style="width: 200px" placeholder="minimun 8 characteres">
             
             <br><br>
             
             <label for="confirmpassword">Confirm your Password:</label>
-            <input type="password" name="password" style="width: 150px">
+            <input type="password" name="password" style="width: 200px">
             
             <br><br>
             
             <input type="submit" value="Register">
-            <input type="reset" value="Clean">                    
-        </form>    
+            <input type="reset" value="Clean">
+            <input type="button" value="Back" onclick="location.href='index.html';"> 
+            <!--tag onclick use to back a specific page-->
+         </form> 
+        
     </body>
 </html>
