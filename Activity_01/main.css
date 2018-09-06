@@ -35,8 +35,37 @@ h4{
 }
 
 body{
-    background: url(logo.png) no-repeat center top fixed;
-    background-size: cover;
+    background: url(logo1.jpg) no-repeat center top fixed;
+    background-size: cover;   
+}
+
+table{
+    border: 1px solid gray;
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+    font-family: monospace;
+    font-size: 15px;
     
 }
+
+th{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+thead{
+    background-color: #339966;
+}
+
+tr:nth-child(even){
+    background-color:  #9fdfbf;
+}
+
+tr:hover{
+    background-color: darkgray;
+    color: whitesmoke;
+}
+
+
 
