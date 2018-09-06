@@ -63,8 +63,8 @@ tr:nth-child(even){
 }
 
 tr:hover{
-    background-color: darkgray;
-    color: whitesmoke;
+    background-color: aliceblue;
+    color: darkcyan;
 }
 
 
