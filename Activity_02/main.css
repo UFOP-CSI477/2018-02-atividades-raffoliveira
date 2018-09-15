@@ -35,10 +35,8 @@ h4{
 }
 
 body{
-    background: url(logo1.jpg) no-repeat center 
-    top fixed;
-    background-size: cover; 
- 
+    background: url(logo1.jpg) no-repeat center top fixed;
+    background-size: cover;   
 }
 
 table{
