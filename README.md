@@ -6,7 +6,7 @@
 
 ### ACTIVITIES
 
-*1. #### ACTIVITY_01 (31/08/2018)
+* 1. #### ACTIVITY_01 (31/08/2018)
 
 Create a main page with a menu using CSS. 
 
@@ -18,7 +18,7 @@ Must have the following options:
 
 ******************************
 
-*2. #### ACTIVITY_02 (14/05/2018)
+* 2. #### ACTIVITY_02 (14/05/2018)
 
 Create a main page with a menu using BootStrap framework.
 
