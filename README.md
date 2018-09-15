@@ -12,9 +12,11 @@ Create a main page with a menu using CSS.
 
 Must have the following options: 
 
-...1.1) Register (form)..
-...1.2) List (table)..
-...1.3) Exit (page)..
+1.1) Register (form)
+
+1.2) List (table)
+
+1.3) Exit (page)
 
 ******************************
 
@@ -24,9 +26,11 @@ Create a main page with a menu using BootStrap framework.
 
 Must have the following options:
 
-...1.1) Register (form)..
-...1.2) List (table)..
-...1.3) Exit (page)..
+1.1) Register (form)
+
+1.2) List (table)
+
+1.3) Exit (page)
 
 ******************************
 
