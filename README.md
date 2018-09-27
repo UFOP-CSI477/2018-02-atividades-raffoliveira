@@ -20,7 +20,7 @@ Must have the following options:
 
 ******************************
 
-* #### ACTIVITY_02 (14/05/2018)
+* #### ACTIVITY_02 (26/09/2018)
 
 Create a main page with a menu using BootStrap framework.
 

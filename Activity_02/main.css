@@ -1,28 +1,3 @@
-/*.navbar{
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0; /*position of menu at the top of the page
-    width: 100%;
-}
-
-/*links inside the navbar
-.navbar a{
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration:none;
-    font-family: sans-serif;
-}
-
-/*change background on mouse-over
-.navbar a:hover{
-    background: #ddd;
-    color: cornflowerblue;
-}
-*/
 main{
     margin-top: 30px; /*add to pamrgin */
     
@@ -71,8 +46,10 @@ tr:hover{
 
 h2{
     font-family: monospace;
-    
 }
 
+configdiv{
+    text-align: center;
+}
 
 
