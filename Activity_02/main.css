@@ -1,3 +1,4 @@
+
 main{
     margin-top: 30px; /*add to pamrgin */
     
@@ -9,8 +10,8 @@ h4{
     
 }
 
-body{
-    /*background: url(logo1.jpg) no-repeat center */
+body_back{
+    background: url('assets/images/beatwall4.jpg') no-repeat center 
     top fixed;
     background-size: cover;
  
@@ -52,4 +53,10 @@ configdiv{
     text-align: center;
 }
 
+p{
+    color: #000000;
+    font-family: cursive;
+    font-size: 13px;
+    padding: 10px
+}
 

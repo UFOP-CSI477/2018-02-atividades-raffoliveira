@@ -5,31 +5,51 @@
 
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
         <title>Activity02</title>
-        <link type="text/css" rel="stylesheet" href="assests/bootstrap/css/bootstrap.css" >
+
+        <link type="text/css" rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" >
         <link rel="stylesheet" href="main.css">
     </head>
 
-    <body>
+    <body class="body_back">
         
        <div class="container-fluid">
-            <ul class="nav nav-pills nav-fill">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Report</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Exit</a>
-                </li>
-            </ul>
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+                <a href="index.html" class="navbar-brand"><img src="assets/images/logo1.jpg" width="30px" height="30px"></a>
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#MainMenu"><span class="navbar-toggler-icon"></span>  
+                </button>
+
+                <div class="collapse navbar-collapse" id="MainMenu">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="register.html">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="report.html">Report</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="exit.html">Exit</a>
+                        </li>
+                    </ul>
+
+                    <form class="form-inline my-2 my-lg-0" placeholder="Search" aria-label="Search" action="#" method="post">
+                        <input type="search" name="search" class="form-control mr-sm-2">
+                        <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
         </div>
 
-      
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
-
 </html>
