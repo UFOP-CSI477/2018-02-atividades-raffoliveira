@@ -37,13 +37,15 @@ function imc() {
 
 $(document).ready(function(){
 
+	$("#tableIMC").hide();
+
 	$("#calcular").click(function(){
 		if($("#resultado").val() < "18.5"){		
 
 			$("p").append("<p class="lead">Seu IMC é <b>$("#resultado").val()</b>.</p>");
-			
 
-
+			$("#linha1").addClass("tr_design");
+			$("#tableIMC").show();
 		}
 		else if("18.5" <= $("#resultado").val() <= "24.9"){
 

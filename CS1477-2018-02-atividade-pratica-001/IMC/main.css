@@ -10,3 +10,13 @@
 input{
 	width: 200px;
 }
+
+.tr_design{
+
+	background-color: #FFF961;
+	font-weight: bold;
+}
+
+.th_design{
+	text-align: center;
+}
