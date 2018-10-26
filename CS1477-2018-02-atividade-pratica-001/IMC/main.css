@@ -1,0 +1,12 @@
+.div_box{
+    background-color: lightgrey;
+    width: 300px;
+    padding: 25px;
+    margin: 25px;
+    position: center;
+    margin: 0 auto; \\centralize the div
+}
+
+input{
+	width: 200px;
+}
