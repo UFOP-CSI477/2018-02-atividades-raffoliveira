@@ -17,6 +17,10 @@ input{
 	font-weight: bold;
 }
 
-.th_design{
+thead{
+	text-align: center;
+}
+
+tbody{
 	text-align: center;
 }
