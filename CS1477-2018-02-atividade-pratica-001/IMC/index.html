@@ -1,58 +1,106 @@
 <!DOCTYPE html>
-<html>    
-    <head>
-        <meta charset="utf-8">
-        <title>Índice de Massa Corporal</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-        <!--<link rel="stylesheet" type="text/css" href="/home/rafael/bootstrap/css/bootstrap.css">-->
-        <link rel="stylesheet" type="text/css" href="main.css">
-        <script src="form.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    </head>
-    <body>
+<html>
 
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4">Índice de Massa Corporal</h1>
-                <p class="lead">Identificando obesidade ou desnutrição em crianças, adolescentes, adultos e idosos.</p>
-            </div>
+<head>
+    <meta charset="utf-8">
+    <title>Índice de Massa Corporal</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="/home/rafael/bootstrap/css/bootstrap.css">-->
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="form.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Índice de Massa Corporal</h1>
+            <p class="lead">Identificando obesidade ou desnutrição em crianças, adolescentes, adultos e idosos.</p>
         </div>
+    </div>
 
-        <p class="lead">Preencha seus dados abaixo e calcule seu IMC:</p>
+    <p id="information" class="lead">Preencha seus dados abaixo e calcule seu IMC:</p>
+    <p id="resultIMC" class="lead"></p>
+    <p id="pesoIdealIMC" class="lead"></p>
 
-        <div class="div_box">
+    <div id="formIMC" class="div_box">
 
-            <form name="data" action="result.html">
-                <div class="form-group" id="group1">
-                    <label for="altura" id="altura" class="lead">Altura:</label>
-                    <input type="text" name="altura" value="" class="form-control" autocomplete="off">
-                    <small id="passwordhelp" class="form-text text-muted">Ex.: 1.80m</small>
-                    <!--criacao de alerta de preenchimento equivocado-->
-                    <div class="alert alert-warning" style="display: none" id="alert1">
-                        <p>Por favor, preencha o campo corretamente!!!</p>
-                    </div>
+        <form name="data" action="result.html">
+            <div class="form-group" id="group1">
+                <label for="altura" id="altura" class="lead">Altura:</label>
+                <input type="text" name="altura" value="" class="form-control" autocomplete="off">
+                <small id="passwordhelp" class="form-text text-muted">Ex.: 1.80m</small>
+                <!--criacao de alerta de preenchimento equivocado-->
+                <div class="alert alert-warning" style="display: none" id="alert1">
+                    <p>Por favor, preencha o campo corretamente!!!</p>
                 </div>
-                
+            </div>
 
-                <div class="form-group" id="group2">
-                    <label for="peso" id="peso" class="lead">Peso:</label>
-                    <input type="text" name="peso" value="" class="form-control" autocomplete="off">
-                    <small id="passwordhelp" class="form-text text-muted">Ex.: 70kg</small>
 
-                    <div class="alert alert-warning" style="display: none" id="alert2">
-                        <p>Por favor, preencha o campo corretamente!!!</p>
-                    </div>
+            <div class="form-group" id="group2">
+                <label for="peso" id="peso" class="lead">Peso:</label>
+                <input type="text" name="peso" value="" class="form-control" autocomplete="off">
+                <small id="passwordhelp" class="form-text text-muted">Ex.: 70kg</small>
+
+                <div class="alert alert-warning" style="display: none" id="alert2">
+                    <p>Por favor, preencha o campo corretamente!!!</p>
                 </div>
-                
-                <div class="form-group">
-                    <label for="resultado" class="lead">Resultado:</label>
-                    <input type="text" name="resultado" value="" class="form-control" autocomplete="off">
-                </div>
-                
-                <button type="button" class="btn btn-primary" id="calcular" onclick="imc()">Calcular</button>
-            </form>
+            </div>
 
-        <div>       
-    
-    </body>    
+            <!--<div class="form-group">
+                <label for="resultado" class="lead">Resultado:</label>
+                <input type="text" name="resultado" value="" class="form-control" autocomplete="off">
+            </div>-->
+
+            <button type="button" class="btn btn-primary" id="calcular" onclick="imc()">Calcular</button>
+        </form>
+
+    </div>
+
+
+    <div id="result_IMC" class="div_box" style="display: none">
+
+        <div class="table-responsive">
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>IMC</th>
+                        <th>Classificação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="linha1">
+                        <td>Abaixo de 18.5</td>
+                        <td>Subnitrução</td>
+                    </tr>
+                    <tr id="linha2">
+                        <td>Entre 18.5 e 24.9</td>
+                        <td>Peso Saudável</td>
+                    </tr>
+                    <tr id="linha3">
+                        <td>Entre 25.0 e 29.9</td>
+                        <td>Sobrepeso</td>
+                    </tr>
+                    <tr id="linha4">
+                        <td>Entre 30.0 e 34.9</td>
+                        <td>Obesidade grau 1</td>
+                    </tr>
+                    <tr id="linha5">
+                        <td>Entre 35.0 e 39.9</td>
+                        <td>Obesidade grau 2</td>
+                    </tr>
+                    <tr id="linha6">
+                        <td>Acima de 40.0</td>
+                        <td>Obesidade grau 3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+</body>
+
 </html>
