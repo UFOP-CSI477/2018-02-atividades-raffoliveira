@@ -34,4 +34,24 @@ Must have the following options:
 
 ******************************
 
+* #### ACTIVITY_03_04 (24/11/2018)
+
+Create the followings topics using Laravel Framework.
+
+3.1) Create a model of Cidades
+
+3.2) Create its resource controller
+
+3.3) Create its view->cidades.index
+
+
+4.1) Create a Alunos->migration(nome, matricula,email,cidade_id)
+
+4.2) Create its resource controller
+
+4.3) Create its view->alunos.index
+
+*******************************
+
+
 [Entre em contato](mailto:rafael.fo@aluno.ufop.edu.br)
