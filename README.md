@@ -34,7 +34,7 @@ Must have the following options:
 
 ******************************
 
-* #### ACTIVITY_03_04 (24/11/2018)
+* #### ACTIVITY_03_04 (Laravel) (24/11/2018)
 
 Create the followings topics using Laravel Framework.
 
