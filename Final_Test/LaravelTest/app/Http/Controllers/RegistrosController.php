@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\registros;
+use App\Registros;
 use Illuminate\Http\Request;
 
 class RegistrosController extends Controller
@@ -14,7 +14,9 @@ class RegistrosController extends Controller
      */
     public function index()
     {
-        return view('administrativa/index');
+      $equi = Registros::orderBy('datalimite')->get();
+      return view('geral/index')->with('geral', $equi);
+
     }
 
     /**
@@ -41,10 +43,10 @@ class RegistrosController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\registros  $registros
+     * @param  \App\Registros  $registros
      * @return \Illuminate\Http\Response
      */
-    public function show(registros $registros)
+    public function show(Registros $registros)
     {
         //
     }
@@ -52,10 +54,10 @@ class RegistrosController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\registros  $registros
+     * @param  \App\Registros  $registros
      * @return \Illuminate\Http\Response
      */
-    public function edit(registros $registros)
+    public function edit(Registros $registros)
     {
         //
     }
@@ -64,10 +66,10 @@ class RegistrosController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\registros  $registros
+     * @param  \App\Registros  $registros
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, registros $registros)
+    public function update(Request $request, Registros $registros)
     {
         //
     }
@@ -75,10 +77,10 @@ class RegistrosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\registros  $registros
+     * @param  \App\Registros  $registros
      * @return \Illuminate\Http\Response
      */
-    public function destroy(registros $registros)
+    public function destroy(Registros $registros)
     {
         //
     }

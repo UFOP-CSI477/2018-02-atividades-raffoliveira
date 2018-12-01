@@ -11,10 +11,9 @@
 |
 */
 
- Route::get('/', function () {
-     return view('welcome');
- });
+Route::get('/', function () {
+    return view('welcome');
+});
 
-//Route::resource('/welcome','WelcomeController');
-Route::resource('/administrativa','RegistrosController');
-Route::resource('/geral','EquipamentosController');
+Route::resource('/geral','RegistrosController');
+Route::resource('/administrativa','EquipamentosController');

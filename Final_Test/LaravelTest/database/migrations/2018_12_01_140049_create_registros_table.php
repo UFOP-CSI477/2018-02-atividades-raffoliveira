@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWelcomesTable extends Migration
+class CreateRegistrosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,14 @@ class CreateWelcomesTable extends Migration
      */
     public function up()
     {
-        Schema::create('welcomes', function (Blueprint $table) {
+        Schema::create('registros', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('equipamento_id');
+            $table->string('descrição',191);
+            $table->dateTime('dataLimite');
+            $table->unsignedInteger('tipo');
             $table->timestamps();
+            $table->foreign('equipamento_id')->references('id')->on('equipamentos');
         });
     }
 
@@ -26,6 +31,6 @@ class CreateWelcomesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('welcomes');
+        Schema::dropIfExists('registros');
     }
 }

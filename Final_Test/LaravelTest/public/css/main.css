@@ -1,4 +1,4 @@
-html, body {
+/* html, body {
     background-color: #fff;
     color: #636b6f;
     font-family: 'Nunito', sans-serif;
@@ -33,18 +33,36 @@ html, body {
 
 .title {
     font-size: 60px;
-}
+} */
 
-.links > a {
-    color: #636b6f;
-    padding: 0 25px;
+.a-links {
+    //color: #636b6f;
+    //padding: 0 25px;
     font-size: 20px;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
+    //border-top: 10px;
+    //font-weight: 600;
+    //letter-spacing: .1rem;
+    //text-decoration: none;
+    //text-transform: uppercase;
+}
+.div-content{
+  padding: 15px;
 }
 
-.m-b-md {
+.table-th{
+  text-align: center;
+  font-size: 17px;
+}
+/* .m-b-md {
     margin-bottom: 5px;
 }
+
+.navbar-main{
+  padding-top: 0px;
+  padding-bottom: 10px;
+  //background-color: #e3f2fd;
+}
+
+.jumbotron-main{
+  padding-bottom: 0px;
+} */
