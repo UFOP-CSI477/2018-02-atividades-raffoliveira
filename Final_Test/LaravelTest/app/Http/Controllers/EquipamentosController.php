@@ -16,6 +16,8 @@ class EquipamentosController extends Controller
     {
         $equi = Equipamentos::orderBy('nome')->get();
         return view('administrativa/index')->with('administrativa',$equi);
+
+
     }
 
     /**
@@ -48,7 +50,7 @@ class EquipamentosController extends Controller
      */
     public function show(Equipamentos $equipamentos)
     {
-        //
+
     }
 
     /**

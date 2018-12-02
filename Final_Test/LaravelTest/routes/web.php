@@ -1,5 +1,8 @@
 <?php
 
+use App\Registros;
+use Illuminate\Support\Facades\Input;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

@@ -3,7 +3,7 @@
 @section('title', 'Area Geral')
 
 @section('content')
-    <table class="table">
+    <table class="table table-striped">
       <thead class="table-info">
           <tr>
             <th class="table-th" colspan="12">RELATÓRIO DE REGISTROS</th>

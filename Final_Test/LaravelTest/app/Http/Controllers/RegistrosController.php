@@ -50,7 +50,7 @@ class RegistrosController extends Controller
      */
     public function show(Registros $registros)
     {
-        //
+
     }
 
     /**

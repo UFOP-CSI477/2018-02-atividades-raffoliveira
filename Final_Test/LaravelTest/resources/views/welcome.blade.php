@@ -12,9 +12,8 @@
         <link rel="stylesheet" href="css/main.css" type="text/css">
     </head>
     <body>
-        <div class="jumbotron">
-            <!-- <h1 class="display-4">Sistema de Manutenção de Equipamentos</h1> -->
-            <nav class="nav nav-pills">
+        <div class="jumbotron jumbotron-main">
+           <nav class="nav nav-pills navbar-main">
                 <a class="btn btn-outline-primary col-sm-4 a-links" href="/" role="button">Área Principal</a>
                 <a class="btn btn-outline-primary col-sm-4 a-links" href="/geral" role="button">Área Geral</a>
                 <a class="btn btn-outline-primary col-sm-4 a-links" href="/administrativa" role="button">Área Administrativa</a>
@@ -22,7 +21,7 @@
 
            <div class="div-content">
                 @yield('content')
-           <div>
+           </div>
 
 
 
