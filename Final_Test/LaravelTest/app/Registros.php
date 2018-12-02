@@ -15,6 +15,10 @@ class Registros extends Authenticatable
    *
    * @var array
    */
-  protected $fillable = ['equipamento_id', 'descricao', 'dataLimite', 'tipo'];
+  protected $fillable = ['equipamento_id', 'descricao', 'datalimite', 'tipo'];
+
+  public function equipamentosName(){
+    return $this->hasMany('App\Equipamentos');
+  }
 
 }

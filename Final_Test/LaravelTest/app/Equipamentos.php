@@ -17,4 +17,8 @@ class Equipamentos extends Authenticatable
 
 
     protected $fillable = ['nome'];
+
+    public function pertenceRegistros(){
+      return $this->belongsTo('App\Registros');
+    }
 }

@@ -1,12 +1,12 @@
-/* html, body {
-    background-color: #fff;
-    color: #636b6f;
+html, body {
+    background-color: #E9ECEF;
+    color: #3D4245;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
     height: 100vh;
     margin: 0;
 }
-
+/*
 .full-height {
     height: 50vh;
 }
@@ -52,6 +52,14 @@
 .table-th{
   text-align: center;
   font-size: 17px;
+}
+
+.table{
+  color: #3D4245;
+}
+
+.p-padding{
+  padding: 15px;
 }
 /* .m-b-md {
     margin-bottom: 5px;

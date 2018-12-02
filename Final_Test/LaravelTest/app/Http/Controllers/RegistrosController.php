@@ -14,8 +14,8 @@ class RegistrosController extends Controller
      */
     public function index()
     {
-      $equi = Registros::orderBy('datalimite')->get();
-      return view('geral/index')->with('geral', $equi);
+      $reg = Registros::orderBy('datalimite')->get();
+      return view('geral/index')->with('geral', $reg);
 
     }
 
@@ -37,7 +37,9 @@ class RegistrosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Registros::create($request->all());
+        return redirect('/geral');
+
     }
 
     /**

@@ -14,7 +14,8 @@ class EquipamentosController extends Controller
      */
     public function index()
     {
-        return view('administrativa/index');
+        $equi = Equipamentos::orderBy('nome')->get();
+        return view('administrativa/index')->with('administrativa',$equi);
     }
 
     /**
@@ -35,7 +36,8 @@ class EquipamentosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Equipamentos::create($request->all());
+        return redirect()->route('administrativa.index');
     }
 
     /**

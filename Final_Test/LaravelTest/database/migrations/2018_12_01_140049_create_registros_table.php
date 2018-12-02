@@ -17,7 +17,7 @@ class CreateRegistrosTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('equipamento_id');
             $table->string('descrição',191);
-            $table->dateTime('dataLimite');
+            $table->date('datalimite');
             $table->unsignedInteger('tipo');
             $table->timestamps();
             $table->foreign('equipamento_id')->references('id')->on('equipamentos');
