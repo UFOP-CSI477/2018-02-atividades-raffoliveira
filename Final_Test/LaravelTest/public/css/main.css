@@ -42,4 +42,18 @@ html, body {
 }
 .label-pad{
   padding: 10px;
+  font-size: 20px;
+}
+
+.container  {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 50;
+  height: 100%;
+  width: 100%;
+}
+
+.container .row {
+  margin: 0 auto;
 }

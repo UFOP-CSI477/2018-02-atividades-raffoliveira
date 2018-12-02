@@ -1,4 +1,4 @@
-@extends ('welcome')
+@extends ('layout')
 
 @section('title', 'Area Geral')
 
@@ -18,7 +18,7 @@
             <th scope="col">UPDATED_AT</th>
           </tr>
       </thead>
-      <tdbody>
+      <tbody>
         @foreach ($geral as $w)
           <tr>
               <th scope="row">{{ $w->id }}</th>

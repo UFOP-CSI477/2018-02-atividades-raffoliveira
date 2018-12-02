@@ -1,34 +1,48 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends ('layout')
 
-        <title>@yield('title', "Initial Page")</title>
+@section('title', 'Initial Page')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/main.css" type="text/css">
-    </head>
-    <body>
-        <div class="jumbotron jumbotron-main">
-           <nav class="nav nav-pills navbar-main">
-                <a class="btn btn-outline-primary col-sm-4 a-links" href="/" role="button">Área Principal</a>
-                <a class="btn btn-outline-primary col-sm-4 a-links" href="/geral" role="button">Área Geral</a>
-                <a class="btn btn-outline-primary col-sm-4 a-links" href="/administrativa" role="button">Área Administrativa</a>
-           </nav>
+@section('content')
 
-           <div class="div-content">
-                @yield('content')
-           </div>
-
-
-
+<div class="container">
+    <div class="row valign-wrapper">
+      <div class="col s4">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">SCe Sistemas</span>
+                <p>Sistemas de Controle de Registro de Manuntenções e Equipamentos. Utilize nosso sistema,
+                o qual oferece o mais variado serviços de consultas e integração de dados.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Saiba Mais</a>
+              </div>
+            </div>
         </div>
-      </body>
+        <div class="col s4">
+            <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                <span class="card-title">Consultas</span>
+                  <p>Realize suas consultas através de serviços utilizando recursos confiáveis da linguagem SQL.
+                    Mantenhha seus dados seguros usando os últimos recursos de criptografias.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">Saiba Mais</a>
+                </div>
+              </div>
+          </div>
+        <div class="col s4">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Administração</span>
+                <p>Temos uma equipe especializada em serviços voltados para integração dos seus dados e nosso banco de
+                  dados. Seu serviço não pode ficar parado por falta de conexão.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Saiba Mais</a>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-</html>
+@endsection

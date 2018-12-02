@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Input;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/','WelcomeController@index');
 Route::resource('/geral','RegistrosController');
 Route::resource('/administrativa','EquipamentosController');

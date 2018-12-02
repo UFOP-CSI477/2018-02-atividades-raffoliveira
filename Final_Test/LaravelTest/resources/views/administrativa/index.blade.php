@@ -1,4 +1,4 @@
-@extends ('welcome')
+@extends ('layout')
 
 @section('title', 'Area Administrativa')
 
@@ -32,8 +32,8 @@
             <div class="form-row">
                   <div class="form-group col-md-4">
                         <label class="label-pad" for="equipamento_id">Registro:</label>
-                        <select class="form-control"  name="equipamento_id">
-                                <option ></option>
+                        <select class="form-control"  name="equipamento_id" >
+                                <option >Escolha um registro</option>
                             @foreach($administrativa as $w)
                                 <option value="{{ $w->id }}">{{ $w->nome }}</option>
                             @endforeach
@@ -76,7 +76,7 @@
               <th scope="col">UPDATED_AT</th>
             </tr>
         </thead>
-        <tdbody>
+        <tbody>
           @foreach ($administrativa as $w)
             <tr>
                 <th scope="row">{{ $w->id }}</th>
