@@ -42,6 +42,18 @@ class EquipamentosController extends Controller
         return redirect()->route('administrativa.index');
     }
 
+    public function search(Request $request){
+
+      // if(!$request){
+      //   $regist = false;
+      //   return view('pesquisa')->with('registro', $regist);
+      // }else{
+        $equipamento = Equipamentos::find($request->get('nome'));
+        $regist = $equipamento->registros->sortBy('datalimite');
+        return view('pesquisa')->with('registro', $regist);
+      // }
+    }
+
     /**
      * Display the specified resource.
      *
@@ -50,7 +62,7 @@ class EquipamentosController extends Controller
      */
     public function show(Equipamentos $equipamentos)
     {
-
+        //
     }
 
     /**
@@ -86,4 +98,5 @@ class EquipamentosController extends Controller
     {
         //
     }
+
 }

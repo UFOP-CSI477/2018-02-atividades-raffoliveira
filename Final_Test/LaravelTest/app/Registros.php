@@ -2,23 +2,21 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
-class Registros extends Authenticatable
+class Registros extends Model
 {
-  use Notifiable;
 
-  /**
-   * The attributes that are mass assignable.
-   *
-   * @var array
-   */
-  protected $fillable = ['equipamento_id', 'descricao', 'datalimite', 'tipo'];
 
-  public function equipamentosName(){
-    return $this->hasMany('App\Equipamentos', 'foreign_key');
+  protected $fillable = ['equipamento_id',
+                         'descricao',
+                         'datalimite',
+                         'tipo'
+                       ];
+
+  public function equipamentos(){
+
+    return $this->belongsTo('App\Equipamentos','equipamento_id');
   }
 
 }

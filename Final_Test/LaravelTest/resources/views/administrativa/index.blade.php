@@ -89,19 +89,19 @@
       </table>
     </div>
 
-
+<!-- route('administrativa.show','$w->id') -->
     <div class="tab-pane fade" id="nav-pesquisa" role="tabpanel" aria-labelledby="nav-pesquisa-tab">
-      <form class="form-inline" action="" method="post">
+      <form class="form-inline" action="{{url('pesquisa')}}" method="get">
           @csrf
           <label class="label-pad" for="nomeEquipamento">Equipamento:</label>
-          <select class="form-control"  name="equipamento_id">
-                  <option ></option>
+          <select class="form-control" name="nome" id="nome">
               @foreach($administrativa as $w)
                   <option value="{{ $w->id }}">{{ $w->nome }}</option>
               @endforeach
           </select>
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
+          <button name="Buscar" class="btn btn-outline-success" type="submit">Buscar</button>
       </form>
+
     </div>
 </div>
 
