@@ -20,29 +20,33 @@
       </tr>
   </thead>
   <tbody>
+
+    @if(count($registro) == 0)
+      <tr>
+        <th class="table-th" colspan="12">Registro não encontrado!</th>
+      </tr>
+</tbody>
+    @else
       @foreach ($registro as $w)
-        if(!isset($registro)){
+        <tr>
+          <th scope="row">{{ $w->id }}</th>
+          <td>{{ $w->equipamento_id }}</td>
+          <td>{{ $w->descricao }}</td>
+          <td>{{ $w->datalimite }}</td>
+          <td>{{ $w->tipo }}</td>
+          <td>{{ $w->created_at }}</td>
+          <td>{{ $w->updated_at }}</td>
+        </tr>
+</tbody>
+      @endforeach
+<tfoot>
           <tr>
-              <th colspan="12">Registro não encontrado!</th>
+            <th class="table-th" colspan="12">*1 -> Preventiva / 2 -> Corretiva / 3 -> Urgente</th>
           </tr>
-      }else{
-          <tr>
-            <th scope="row">{{ $w->id }}</th>
-            <td>{{ $w->equipamento_id }}</td>
-            <td>{{ $w->descricao }}</td>
-            <td>{{ $w->datalimite }}</td>
-            <td>{{ $w->tipo }}</td>
-            <td>{{ $w->created_at }}</td>
-            <td>{{ $w->updated_at }}</td>
-          </tr>
-      }
-    @endforeach
-  </tbody>
-  <tfoot>
-    <tr>
-      <th colspan="12">*1 -> Preventiva / 2 -> Corretiva / 3 -> Urgente</th>
-    </tr>
-  </tfoot>
+</tfoot>
+
+    @endif
+
 </table>
 
 @endsection
