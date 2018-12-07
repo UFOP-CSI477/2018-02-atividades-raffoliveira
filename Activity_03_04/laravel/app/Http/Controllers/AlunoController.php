@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Cidade;
+use App\Aluno;
 use Illuminate\Http\Request;
 
-class CidadeController extends Controller
+class AlunoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class CidadeController extends Controller
      */
     public function index()
     {
-        $cidades = Cidade::all();
-        return view('cidades.index')->with('cidades', $cidades);
+        //
     }
 
     /**
@@ -25,7 +24,7 @@ class CidadeController extends Controller
      */
     public function create()
     {
-        return view('cidades.create');
+        //
     }
 
     /**
@@ -36,56 +35,50 @@ class CidadeController extends Controller
      */
     public function store(Request $request)
     {
-        Cidade::create($request->all());
-        return redirect('/cidades');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Cidade  $cidade
+     * @param  \App\Aluno  $aluno
      * @return \Illuminate\Http\Response
      */
-    public function show(Cidade $cidade)
+    public function show(Aluno $aluno)
     {
-        return view('cidades.show')->with('cidades', $cidade);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Cidade  $cidade
+     * @param  \App\Aluno  $aluno
      * @return \Illuminate\Http\Response
      */
-    public function edit(Cidade $cidade)
+    public function edit(Aluno $aluno)
     {
-        return view('cidades.edit')->with('cidades', $cidade);
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Cidade  $cidade
+     * @param  \App\Aluno  $aluno
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cidade $cidade)
+    public function update(Request $request, Aluno $aluno)
     {
-        $cidade->fill($request->all());
-        $cidade->save();
-
-        session()->flash('mensagem', 'Cidade atualizada com sucesso.');
-
-        return redirect()->route('cidades.show', $cidade->id);
-        }
+        //
+    }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Cidade  $cidade
+     * @param  \App\Aluno  $aluno
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cidade $cidade)
+    public function destroy(Aluno $aluno)
     {
         //
     }

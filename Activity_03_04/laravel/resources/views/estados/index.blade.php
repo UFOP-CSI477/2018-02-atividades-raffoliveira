@@ -11,14 +11,4 @@
   @endforeach
 
 
-
-
-
-
-
-
-
-
-
-
 @endsection
