@@ -11,14 +11,4 @@
   <a href="{{ route('estados.index') }}">Voltar</a>
   <a href="{{ route('estados.edit', $estado->id) }}">Editar</a>
 
-
-
-
-
-
-
-
-
-
-
 @endsection

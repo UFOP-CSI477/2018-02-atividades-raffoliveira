@@ -14,7 +14,8 @@ class AlunoController extends Controller
      */
     public function index()
     {
-        //
+        $alunos = Aluno::all();
+        return view('alunos.index')->with('alunos',$alunos);
     }
 
     /**
@@ -24,7 +25,7 @@ class AlunoController extends Controller
      */
     public function create()
     {
-        //
+        return view('alunos.create');
     }
 
     /**
@@ -35,7 +36,8 @@ class AlunoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Aluno::create($request->all());
+        return redirect('/alunos');
     }
 
     /**
@@ -46,7 +48,7 @@ class AlunoController extends Controller
      */
     public function show(Aluno $aluno)
     {
-        //
+        return view('alunos.show')->with('alunos',$aluno);
     }
 
     /**
@@ -57,7 +59,7 @@ class AlunoController extends Controller
      */
     public function edit(Aluno $aluno)
     {
-        //
+        return view('alunos.edit')->with('alunos',$aluno);
     }
 
     /**
@@ -69,7 +71,11 @@ class AlunoController extends Controller
      */
     public function update(Request $request, Aluno $aluno)
     {
-        //
+        $aluno->fill($request->all());
+        $aluno->save();
+
+        session()->flash('mensagem', 'Aluno atualizado com sucesso.');
+        return redirect()->route('alunos.show', $aluno->id);
     }
 
     /**

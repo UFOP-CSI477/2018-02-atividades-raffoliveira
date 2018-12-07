@@ -19,3 +19,4 @@ Route::get('/contato', 'PaginasController@contato');
 
 Route::resource('/estados', 'EstadoController');
 Route::resource('/cidades', 'CidadeController');
+Route::resource('/alunos', 'AlunoController');
