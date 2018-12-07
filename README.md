@@ -51,7 +51,16 @@ Create the followings topics using Laravel Framework.
 
 4.3) Create its view->alunos.index
 
+4.4) Create Cidades/Alunos => create/store
+
+4.5) Create Cidades/Alunos => show/edit/update
+
 *******************************
+
+* #### FINAL_TEST (30/11/2018)
+
+Realização de um Sistema de Manutenção de Equipamentos
+Todas as especificações estão contidas na prova. 
 
 
 [Entre em contato](mailto:rafael.fo@aluno.ufop.edu.br)

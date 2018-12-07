@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\cidades;
+use App\Estado;
 
-class CidadeController extends Controller
+class EstadoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,18 +14,19 @@ class CidadeController extends Controller
      */
     public function index()
     {
-        $city = cidades::all();
-        return view('cidades.index')->with('cidades',$city);
+        $estados = Estado::all();
+        return view('estados.index')
+                  ->with('estados', $estados);
     }
+
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    
     public function create()
     {
-        //
+        return view('estados.create');
     }
 
     /**
@@ -36,7 +37,13 @@ class CidadeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request->all());
+        // Validação
+
+        // Gravar
+        Estado::create($request->all());
+        return redirect('/estados');
+
     }
 
     /**
@@ -45,9 +52,12 @@ class CidadeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Estado $estado)
     {
-        //
+        //$id
+        //$estado = Estado::find($id);
+        return view('estados.show')
+                ->with('estado', $estado);
     }
 
     /**
@@ -56,9 +66,10 @@ class CidadeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Estado $estado)
     {
-        //
+        return view('estados.edit')
+                  ->with('estado', $estado);
     }
 
     /**
@@ -68,9 +79,18 @@ class CidadeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Estado $estado)
     {
-        //
+        //dd( $estado );
+        //dd( $request->all() );
+        // $estado->nome = $request->nome;
+        $estado->fill($request->all());
+        $estado->save();
+
+        session()->flash('mensagem', 'Estado atualizado com sucesso!');
+
+        return redirect()->route('estados.show', $estado->id);
+
     }
 
     /**

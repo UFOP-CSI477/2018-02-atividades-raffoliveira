@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Cidade;
 use Illuminate\Http\Request;
-use App\alunos;
 
-class AlunoController extends Controller
+class CidadeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class AlunoController extends Controller
      */
     public function index()
     {
-        $students = alunos::all();
-        return view('alunos.index')->with('alunos', $students);
+        //
     }
 
     /**
@@ -42,10 +41,10 @@ class AlunoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Cidade  $cidade
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Cidade $cidade)
     {
         //
     }
@@ -53,10 +52,10 @@ class AlunoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Cidade  $cidade
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Cidade $cidade)
     {
         //
     }
@@ -65,10 +64,10 @@ class AlunoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Cidade  $cidade
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Cidade $cidade)
     {
         //
     }
@@ -76,10 +75,10 @@ class AlunoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Cidade  $cidade
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Cidade $cidade)
     {
         //
     }

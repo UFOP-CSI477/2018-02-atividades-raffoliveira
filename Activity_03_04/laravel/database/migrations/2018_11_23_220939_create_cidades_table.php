@@ -1,8 +1,3 @@
-criar modelo, resource controller, view->cidades.index
-criar alunos->migration(nome,matricula,email, cidade_id), resource controller, view(alunos.index)
-
-
-
 <?php
 
 use Illuminate\Support\Facades\Schema;
@@ -21,11 +16,17 @@ class CreateCidadesTable extends Migration
         Schema::create('cidades', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome');
-//            $table->integer('estado_id')->unsigned();
+
+            //$table->integer('estado_id')->unsigned();
             $table->unsignedInteger('estado_id');
+
             $table->timestamps();
-            
-            $table->foreign('estado_id')->references('id')->on('estados');
+
+            $table->foreign('estado_id')
+                      ->references('id')
+                      ->on('estados');
+
+
         });
     }
 
