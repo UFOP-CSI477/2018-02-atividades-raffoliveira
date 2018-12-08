@@ -55,6 +55,10 @@ Create the followings topics using Laravel Framework.
 
 4.5) Create Cidades/Alunos => show/edit/update
 
+4.6) Create Authentication Cidades/Alunos/Estados
+
+4.7) Personalize raiz(/) e (/home)
+
 *******************************
 
 * #### FINAL_TEST (30/11/2018)

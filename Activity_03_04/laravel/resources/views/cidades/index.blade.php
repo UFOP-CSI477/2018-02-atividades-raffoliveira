@@ -6,7 +6,7 @@
 
   @foreach($cidades as $w)
 
-    <p><a href="{{ route('cidades.show', $w->id) }}">{{ $w->nome }}-{{ $w->estado_id }}</a></p>
+    <p><a href="{{ route('cidades.show', $w->id) }}">{{ $w->nome }}-{{ $w->estado->nome }}</a></p>
 
   @endforeach
 

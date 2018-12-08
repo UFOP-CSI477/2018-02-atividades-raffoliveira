@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Aluno;
+use App\Cidade;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AlunoController extends Controller
 {
@@ -12,10 +14,21 @@ class AlunoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct() {
+
+        $this->middleware('auth')->except('index');
+    }
+
     public function index()
     {
-        $alunos = Aluno::all();
-        return view('alunos.index')->with('alunos',$alunos);
+        //if(Auth::check()){
+            $alunos = Aluno::all();
+            return view('alunos.index')->with('alunos',$alunos);
+        //}else{
+          //  return redirect()->route('login');
+       // }
+       
     }
 
     /**
@@ -25,7 +38,8 @@ class AlunoController extends Controller
      */
     public function create()
     {
-        return view('alunos.create');
+        $cidades = Cidade::orderBy('nome')->get();
+        return view('alunos.create',[ 'cidades' => $cidades ] );
     }
 
     /**
@@ -59,7 +73,9 @@ class AlunoController extends Controller
      */
     public function edit(Aluno $aluno)
     {
-        return view('alunos.edit')->with('alunos',$aluno);
+       
+        $cidades = Cidade::orderBy('nome')->get();
+        return view('alunos.edit', [ 'alunos' => $aluno,'cidades' => $cidades]);
     }
 
     /**
@@ -86,6 +102,8 @@ class AlunoController extends Controller
      */
     public function destroy(Aluno $aluno)
     {
-        //
+        $aluno->delete();
+        session()->flash('Aluno excluido com sucesso!');
+        return redirect()->route('alunos.index');
     }
 }

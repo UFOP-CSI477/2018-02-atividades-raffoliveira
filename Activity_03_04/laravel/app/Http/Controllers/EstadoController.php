@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Estado;
+use App\Cidade;
 
 class EstadoController extends Controller
 {
@@ -16,9 +17,6 @@ class EstadoController extends Controller
     {
         $this->middleware('auth')->except('index');
     }
-
-
-
 
 
     public function index()
@@ -108,8 +106,10 @@ class EstadoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Estado $estado)
     {
-        //
+      $estado->delete();
+      session()->flash('Estado excluido com sucesso!');
+      return redirect()->route('estados.index');
     }
 }

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Cidade;
+use App\Estado;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CidadeController extends Controller
 {
@@ -12,10 +14,21 @@ class CidadeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct() {
+
+        $this->middleware('auth')->except('index');
+    }
+
     public function index()
     {
-        $cidades = Cidade::all();
-        return view('cidades.index')->with('cidades', $cidades);
+
+        //if(Auth::check()){
+            $cidades = Cidade::all();
+            return view('cidades.index')->with('cidades', $cidades);
+        // }else{
+        //     return redirect()->route('login');
+        // }
     }
 
     /**
@@ -25,7 +38,8 @@ class CidadeController extends Controller
      */
     public function create()
     {
-        return view('cidades.create');
+        $estados = Estado::orderBy('nome')->get();
+        return view('cidades.create',[ 'estados' => $estados ] );
     }
 
     /**
@@ -59,7 +73,8 @@ class CidadeController extends Controller
      */
     public function edit(Cidade $cidade)
     {
-        return view('cidades.edit')->with('cidades', $cidade);
+        $estados = Estado::orderBy('nome')->get();
+        return view('cidades.edit', [ 'cidade' => $cidade,'estados' => $estados]);
     }
 
     /**
@@ -87,6 +102,8 @@ class CidadeController extends Controller
      */
     public function destroy(Cidade $cidade)
     {
-        //
+        $cidade->delete();
+        session()->flash('Cidade atualizada com sucessoe!');
+        return redirect()->route('alunos.index');
     }
 }

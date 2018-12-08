@@ -6,7 +6,7 @@
 
   @foreach($alunos as $e)
 
-<p><a href="{{ route('alunos.show', $e->id) }}">{{ $e->nome }}-{{ $e->rua }}-{{ $e->numero }}-{{ $e->bairro }}-{{ $e->cidade_id }}-{{ $e->cep }}-{{ $e->mail }}</a></p>
+<p><a href="{{ route('alunos.show', $e->id) }}">{{ $e->nome }}-{{ $e->rua }}-{{ $e->numero }}-{{ $e->bairro }}-{{ $e->cidade->nome }}-{{ $e->cep }}-{{ $e->mail }}</a></p>
 
 @endforeach
 

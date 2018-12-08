@@ -9,7 +9,13 @@
     @csrf
 
       <p>Nome: <input type="text" name="nome"></p>
-      <p>Estado_ID: <input type="text" name="estado_id"></p>
+      <p>Estado_ID:</p>
+
+      <select name="estado_id">
+        @foreach($estados as $e)
+          <option value="{{ $e->id }}">{{ $e->nome }}</option>
+        @endforeach
+      </select>
 
       <input type="submit" name="btnSalvar" value="Incluir">
 
