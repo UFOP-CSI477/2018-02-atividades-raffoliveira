@@ -64,7 +64,9 @@ Create the followings topics using Laravel Framework.
 * #### FINAL_TEST (30/11/2018)
 
 Realização de um Sistema de Manutenção de Equipamentos
-Todas as especificações estão contidas na prova. 
+Todas as especificações estão contidas na prova.
+Realizado utilizando framework Laravel
+ 
 
 
 [Entre em contato](mailto:rafael.fo@aluno.ufop.edu.br)
